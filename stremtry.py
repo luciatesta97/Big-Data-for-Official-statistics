@@ -33,7 +33,7 @@ from tensorflow import keras
 import time
 
 st.title("Let's play with audio recognition!")
-st.image('audio_img.jpg')
+#st.image('audio_img.jpg')
 
 # These are the formats supported in Streamlit right now.
 AUDIO_EXTENSIONS = ["wav"]
