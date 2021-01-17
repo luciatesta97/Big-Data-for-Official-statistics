@@ -62,9 +62,9 @@ def record():
     mydata=sd.rec(int(samplerate*duration),samplerate=samplerate,channels=1,blocking=True)
     print("end")
     sd.wait()
-    sf.write(filename,mydata,samplerate)
-    test,test_rate = librosa.load('try.wav',sr=1600)
-    test_sample = librosa.resample(test,test_rate,8000)
+    #sf.write(filename,mydata,samplerate)
+    #test,test_rate = librosa.load('try.wav',sr=1600)
+    test_sample = librosa.resample(mydata,samplerate,8000)
     prob = model.predict(test_sample.reshape(1,8000,1))
     if np.amax(prob)<0.5:
         st.markdown("""
